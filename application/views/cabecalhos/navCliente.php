@@ -19,14 +19,16 @@
         <a class="nav-link" href="#">Produtos</a>
       </li>
       <li class = "nav-item">
+      <a class="nav-link" href="#"> <?php
       
-         <!-- <?php
-
-        $nome = explode (" ", $_SESSION['nome']);
-        //separa as strings por um parametro pré-determinado
-        echo "<a href='#' class='nav-link text-white'>" . $nome[0]. "</a>";
-
-         ?>  -->
+                if(isset($this->session->username)){
+                  echo $this->session->username;
+              }
+              $this->session->sess_destroy();
+      
+        
+         ?>  <span class="sr-only">(current)</span></a>
+         
       </li>
       
     </ul>

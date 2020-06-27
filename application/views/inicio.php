@@ -27,7 +27,15 @@
          <form action="<?php echo base_url('index.php/login/vldLogin');?>" method="POST" id="login">
               
             <label class="" for="">Usuário ou Email</label>
-            <input class="" type="text"  placeholder="Digite aqui seu email ou usuário" name="user" id="usuario">
+            <input class="" type="text"  placeholder="Digite aqui seu email ou usuário" name="user" id="usuario" 
+            value="<?php 
+                if(isset($this->session->email)){
+                    echo $this->session->email;
+                }
+                $this->session->sess_destroy();
+            
+            ?>"
+            >
             <label class="" for="">Senha</label>
             <input class="" type= "password" placeholder="Digite sua senha mais louca pique area 51" name="pass">
 

@@ -65,13 +65,13 @@ $(function(){
 
 
                 
-                if(data == "caiu"){
+                if(data == "sucessoCliente"){
                     //se der certo, ele entra no sucesso, vai para a
-                    window.location.replace("TelaLogin");
+                    window.location.replace("TelaCliente");
                 }
-                if(data == "SucessoAdministrador"){
+                if(data == "SucessoAdm"){
                     //se der certo, ele entra no sucesso, vai para a
-                    window.location.replace("view/administracao/");
+                    window.location.replace("TelaAdm");
                 }
                 
             },//sucess

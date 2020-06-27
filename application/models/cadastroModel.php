@@ -13,7 +13,7 @@ return $resultado;
 
 public function logarUser($user, $pass){
 
-    $this->db->where("userName", $user);
+    $this->db->where("username", $user);
     $this->db->or_where("email", $user);
     $this->db->where("senha", $pass);
 

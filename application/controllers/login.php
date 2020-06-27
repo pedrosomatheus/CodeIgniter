@@ -4,6 +4,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class login extends CI_Controller
 {
 
+
     public function index()
     {
         $this->load->view('Home_Page');
@@ -19,13 +20,20 @@ class login extends CI_Controller
         $this->load->view('inicio');
     }
     public function Entrar()
-	{
+    {
         $this->load->view('inicio');
     }
-    
-    public function TelaLogin(){
+
+    public function TelaCliente()
+    {
         $this->load->view('Cliente/index');
     }
+
+    public function TelaAdm()
+    {
+        $this->load->view('Adm/index');
+    }
+
 
     public function vldLogin()
     {
@@ -35,6 +43,10 @@ class login extends CI_Controller
         $user = $this->input->post("user");
 
         $pass = $this->input->post("pass");
+
+       
+    
+      
 
         if (empty($user)) {
             echo "erroUser";
@@ -46,6 +58,9 @@ class login extends CI_Controller
             die();
         }
 
+        $this->session->username = $user;
+       
+
 
         $resultado = $this->cadastroModel->logarUser($user, $pass);
         //chamada de método
@@ -53,12 +68,12 @@ class login extends CI_Controller
 
         if ($resultado->num_rows() <= 0) {
 
-           echo "FalhaLogin"; 
+            echo "FalhaLogin";
 
             die();
         }
 
-        switch ($linha->tipo){
+        switch ($linha->tipo) {
 
             case "administrador":
                 echo "sucessoAdm";
@@ -66,7 +81,8 @@ class login extends CI_Controller
 
 
             case "cliente":
-                echo "caiu";
+              
+                echo "sucessoCliente";
                 break;
         }
     }
@@ -132,6 +148,8 @@ class login extends CI_Controller
         }
 
         if ($this->cadastroModel->CadastrarUsuario($dados)) {
+
+            $this->session->email = $dados['email'];
             echo "sucesso";
             die();
         }

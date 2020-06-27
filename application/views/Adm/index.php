@@ -16,7 +16,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <?php
 
-$this->load->view('navAdm.php');
+$this->load->view('cabecalhos/navAdm.php');
 
 
 ?>

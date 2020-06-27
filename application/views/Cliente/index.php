@@ -28,10 +28,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
     <?php
 
-    $this->load->view('navCliente.php');
-    $this->load->view('logo.php');
+    $this->load->view('cabecalhos/navCliente.php');
+    $this->load->view('cabecalhos/logo.php');
 
-
+ 
     ?>
 
 
