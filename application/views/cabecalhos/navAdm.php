@@ -10,7 +10,7 @@
         <a class="nav-link" href="./">Pagina Inicial<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" href="#">Funcionários<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<?php echo base_url ('index.php/adm/funcionario'); ?>">Funcionários<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Clientes</a>
@@ -22,10 +22,14 @@
       
          <!-- <?php
 
-        $nome = explode (" ", $_SESSION['nome']);
-        //separa as strings por um parametro pré-determinado
-        echo "<a href='#' class='nav-link text-white'>" . $nome[0]. "</a>";
+         
+    if(isset($this->session->username)){
+      echo $this->session->username;
+    }
+    $this->session->sess_destroy();
 
+
+?>  <span class="sr-only">(current)</span></a>
          ?>  -->
       </li>
       

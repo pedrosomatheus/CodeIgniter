@@ -73,6 +73,26 @@ $(function(){
                       })
                 }
 
+                if(data == "erroTipo"){
+
+                    const Toast = Swal.mixin({
+                        toast: true,
+                        position: 'top-end',
+                        showConfirmButton: false,
+                        timer: 3000,
+                        timerProgressBar: true,
+                        onOpen: (toast) => {
+                          toast.addEventListener('mouseenter', Swal.stopTimer)
+                          toast.addEventListener('mouseleave', Swal.resumeTimer)
+                        }
+                      })
+                      
+                      Toast.fire({
+                        icon: 'error',
+                        title: 'Preencha o campo Tipo!'
+                      })
+                }
+
                 if(data == "erroEmailExite"){
                   Swal.fire({
                     icon: 'error',
@@ -138,6 +158,10 @@ $(function(){
                         title: 'Muito Bem!',
                         text: 'Cadastrado! Agora faça Login!',
                         confirmButtonText: 'Ok'
+                        }).then((result) => {
+                          if(result.value){
+                            window.location.replace("Entrar");
+                          }
                         })
                     }
 
