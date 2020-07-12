@@ -44,9 +44,6 @@ class login extends CI_Controller
 
         $pass = $this->input->post("pass");
 
-       
-    
-      
 
         if (empty($user)) {
             echo "erroUser";
@@ -59,7 +56,7 @@ class login extends CI_Controller
         }
 
         $this->session->username = $user;
-       
+
 
 
         $resultado = $this->cadastroModel->logarUser($user, $pass);
@@ -81,7 +78,7 @@ class login extends CI_Controller
 
 
             case "cliente":
-              
+
                 echo "sucessoCliente";
                 break;
         }

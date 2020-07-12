@@ -69,7 +69,7 @@ $(function(){
                     //se der certo, ele entra no sucesso, vai para a
                     window.location.replace("TelaCliente");
                 }
-                if(data == "SucessoAdm"){
+                if(data == "sucessoAdm"){
                     //se der certo, ele entra no sucesso, vai para a
                     window.location.replace("TelaAdm");
                 }
