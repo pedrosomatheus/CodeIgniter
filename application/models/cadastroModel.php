@@ -24,9 +24,14 @@ public function logarUser($user, $pass){
 
 public function CadastrarUsuario($dados){
 
-    
   return  $this->db->insert("users", $dados);
 
+}
+
+public function CadastrarProduto($dados, $foto){
+
+    return  $this->db->insert("produto", $dados, $foto);
+  
 }
 
 public function verificaEmail ($dados){

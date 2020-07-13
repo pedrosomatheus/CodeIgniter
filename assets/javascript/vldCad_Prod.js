@@ -33,7 +33,7 @@ $(function(){
                       })
                 }
 
-                if(data == "erroUserName"){
+                if(data == "erroDesc"){
 
                   const Toast = Swal.mixin({
                       toast: true,
@@ -49,11 +49,11 @@ $(function(){
                     
                     Toast.fire({
                       icon: 'error',
-                      title: 'Preencha o campo UserName!'
+                      title: 'Preencha o campo Descrição!'
                     })
               }
 
-                if(data == "erroEmail"){
+                if(data == "erroPreco"){
 
                     const Toast = Swal.mixin({
                         toast: true,
@@ -69,11 +69,11 @@ $(function(){
                       
                       Toast.fire({
                         icon: 'error',
-                        title: 'Preencha o campo Email!'
+                        title: 'Preencha o campo Preço!'
                       })
                 }
 
-                if(data == "erroTipo"){
+                if(data == "erroCod"){
 
                     const Toast = Swal.mixin({
                         toast: true,
@@ -89,20 +89,20 @@ $(function(){
                       
                       Toast.fire({
                         icon: 'error',
-                        title: 'Preencha o campo Tipo!'
+                        title: 'Preencha o campo Código de Barras!'
                       })
                 }
 
-                if(data == "erroEmailExite"){
+                if(data == "erroCodN"){
                   Swal.fire({
                     icon: 'error',
-                    title: 'Já existente!',
-                    text: 'Email já cadastrado.',
+                    title: 'Coloque a quantidade certa!',
+                    text: 'Até 13 digitos.',
                     confirmButtonText: 'Ok'
                     });
                 }
 
-                if(data == "erroCpf"){
+                if(data == "erroEstoque"){
 
                     const Toast = Swal.mixin({
                         toast: true,
@@ -118,38 +118,10 @@ $(function(){
                       
                       Toast.fire({
                         icon: 'error',
-                        title: 'Preencha o campo CPF!'
+                        title: 'Preencha o campo Estoque!'
                       })
                 }
 
-                if(data == "erroCPFExiste"){
-                  Swal.fire({
-                    icon: 'error',
-                    title: 'Já existente!',
-                    text: 'CPF já cadastrado.',
-                    confirmButtonText: 'Ok'
-                    });
-                }
-
-                if(data == "erroSenha"){
-
-                    const Toast = Swal.mixin({
-                        toast: true,
-                        position: 'top-end',
-                        showConfirmButton: false,
-                        timer: 3000,
-                        timerProgressBar: true,
-                        onOpen: (toast) => {
-                          toast.addEventListener('mouseenter', Swal.stopTimer)
-                          toast.addEventListener('mouseleave', Swal.resumeTimer)
-                        }
-                      })
-                      
-                      Toast.fire({
-                        icon: 'error',
-                        title: 'Preencha o campo Senha!'
-                      })
-                }
 
                 if(data == "sucesso"){
 

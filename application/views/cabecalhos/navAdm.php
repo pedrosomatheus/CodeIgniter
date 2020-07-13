@@ -16,7 +16,7 @@
         <a class="nav-link" href="#">Clientes</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Produtos</a>
+        <a class="nav-link" href="<?php echo base_url ('index.php/adm/produto'); ?>">Produtos</a>
       </li>
       <li class = "nav-item">
       
