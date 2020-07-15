@@ -39,8 +39,8 @@ $this->load->view('cabecalhos/navAdm.php')
         <div class="col-lg-6 mx-auto">
             <h1 class="text-center text-light">Cadastro de Produtos</h1> 
 
-            <form action="<?php echo base_url('index.php/adm/vldProduto');?>" class="container tamanhoTela text-light"
-
+            <form action="<?php echo base_url('index.php/adm/vldProduto');?>" 
+             class="container tamanhoTela text-light"
              method="POST" id="cadastrar" enctype='multipart/form-data'>
 
                 <div id="imagem" class="imgCadastro mx-auto my-5">
@@ -90,7 +90,7 @@ $this->load->view('cabecalhos/navAdm.php')
 
                 <div class="form-row">
                     <div class="col-lg-6 my-3 mx-auto">
-                        <input class="form-control btn-lg btn btn-success" 
+                        <input class="form-control btn-lg btn btn-light" 
                         type="submit" value="Cadastrar" name="cadastro" id="Cadastrar">
                     </div>
                 </div>
@@ -102,6 +102,7 @@ $this->load->view('cabecalhos/navAdm.php')
 </div>
 
 <script type='text/javascript'>
+
         $("#arquivo").on('change', function () {
             if (typeof (FileReader) != "undefined") {
                 var imagem = $("#imagem");
@@ -120,6 +121,7 @@ $this->load->view('cabecalhos/navAdm.php')
                 alert("Este navegador nao suporta FileReader.");
             }
         });
+
 </script>
 
 <script src="<?php echo base_url('assets/node_modules/jquery/dist/jquery.js');?>"></script>

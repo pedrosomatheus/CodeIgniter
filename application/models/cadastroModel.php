@@ -28,9 +28,9 @@ public function CadastrarUsuario($dados){
 
 }
 
-public function CadastrarProduto($dados, $foto){
+public function CadastrarProduto($dados){
 
-    return  $this->db->insert("produto", $dados, $foto);
+    return  $this->db->insert("produto", $dados);
   
 }
 

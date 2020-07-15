@@ -20,7 +20,7 @@
       </li>
       <li class = "nav-item">
       
-         <!-- <?php
+         <?php
 
          
     if(isset($this->session->username)){
@@ -30,7 +30,7 @@
 
 
 ?>  <span class="sr-only">(current)</span></a>
-         ?>  -->
+         ?> 
       </li>
       
     </ul>

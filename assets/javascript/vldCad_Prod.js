@@ -128,7 +128,7 @@ $(function(){
                     Swal.fire({
                         icon: 'success',
                         title: 'Muito Bem!',
-                        text: 'Cadastrado! Agora faça Login!',
+                        text: 'Cadastrado!',
                         confirmButtonText: 'Ok'
                         })
                     }

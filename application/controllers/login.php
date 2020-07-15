@@ -56,7 +56,7 @@ class login extends CI_Controller
         }
 
         $this->session->username = $user;
-
+        
 
 
         $resultado = $this->cadastroModel->logarUser($user, $pass);
@@ -73,12 +73,13 @@ class login extends CI_Controller
         switch ($linha->tipo) {
 
             case "administrador":
+                $this->session->tipo = "administrador";
                 echo "sucessoAdm";
                 break;
 
 
             case "cliente":
-
+                $this->session->tipo = "cliente";
                 echo "sucessoCliente";
                 break;
         }

@@ -1,5 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+
+if(!isset($this->session->tipo)){
+    redirect(base_url());
+    die();
+}
+
+
 ?>
 
 <!DOCTYPE html>
