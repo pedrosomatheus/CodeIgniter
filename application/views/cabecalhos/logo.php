@@ -20,6 +20,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
         .loading {
             position: absolute;
             left: 30%;
+            
            
         }
     </style>
